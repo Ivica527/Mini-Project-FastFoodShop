@@ -8,10 +8,11 @@
     <title>Contact Us - FF</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
   </head>
   <body>
     <header class="header">
-      <h1 class="header__h1">Contact Us</h1>
+      <h1 class="header__h1">Fast Food Shop</h1>
       <nav class="header__nav">
         <ul class="header__ul">
           <li>
@@ -41,15 +42,32 @@
         <figcaption class="offscreen">Fast Food Shop</figcaption>
       </figure>
     </section>
-    <main>
-      <section>
-        <h2>Our Contact Form</h2>
-        <form action="https://httpbin.org/get" method="GET">
-          <fieldset>
-            <legend>Send US A Message</legend>
-            <p>
-              <label for="name">Name:</label>
+    <main class="main">
+      <article class="main__article">
+        <h2>Our Location</h2>
+        <address>
+          Bulevar Oslobodjenja br 37 <br />
+          11 000, Belgrade
+          <br><br>
+          Phone: <a href="tel:+381113684525">+381/1368-4525</a>
+          <br><br>
+        </address>
+      </article>
+      <hr>
+      <br>
+      <article class="main__article contact">
+        <h2 class="contact__h2">Our Contact Form</h2>
+        <form
+          action="https://httpbin.org/get"
+          method="GET"
+          class="contact__form"
+        >
+          <fieldset class="contact__fieldset">
+            <legend class="offscreen">Send US A Message</legend>
+            <p class="contact__p">
+              <label class="contact__label" for="name">Name:</label>
               <input
+                class="contact__input"
                 type="text"
                 name="name"
                 id="name"
@@ -57,9 +75,10 @@
                 required
               />
             </p>
-            <p>
-              <label for="email">Email:</label>
+            <p class="contact__p">
+              <label class="contact__label" for="email">Email:</label>
               <input
+                class="contact__input"
                 type="email"
                 name="email"
                 id="email"
@@ -67,10 +86,11 @@
                 required
               />
             </p>
-            <p>
-              <label for="message">Your message:</label>
+            <p class="contact__p">
+              <label class="contact__label" for="message">Your message:</label>
               <br />
               <textarea
+                class="contact__textarea"
                 name="message"
                 id="message"
                 cols="30"
@@ -80,24 +100,14 @@
               ></textarea>
             </p>
           </fieldset>
-          <button type="submit">Send</button>
-          <button type="reset">Reset</button>
+          <button class="contact__button" type="submit">Send</button>
+          <button class="contact__button" type="reset">Reset</button>
         </form>
-      </section>
-
-      <section>
-        <h2>Our Location</h2>
-        <address>
-          Bulevar Oslobodjenja br 37 <br />
-          11 000, Belgrade
-          <br />
-          Phone: <a href="tel:+381113684525">+381/1368-4525</a>
-        </address>
-      </section>
+      </article>
     </main>
     <footer class="footer">
       <p>
-        <span class="nowrap">Copyright &copy;</span>
+        <span class="nowrap">Copyright &copy;<time id="year"></time></time></span>
         <span class="nowrap">Fast Food Shop</span>
       </p>
     </footer>
